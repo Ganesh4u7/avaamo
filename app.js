@@ -25,7 +25,7 @@ let app_init = async () => {
         // res.redirect('/login');
         });
         app.all('*', function(req, res) {
-          res.redirect("/login");
+          res.redirect("/");
         });
 
     app.listen(port, () => {
