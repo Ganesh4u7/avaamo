@@ -22,8 +22,12 @@ let app_init = async () => {
     app.use(express.static(path.join(__dirname, './dist/avaamo-assignment')));
         app.get('/',function(req,res){
            res.sendFile(path.join(__dirname,"./dist/avaamo-assignment/index.html"));
-        // res.redirect('/login');
         });
+
+        app.get('/signup',function(req,res){
+          res.sendFile(path.join(__dirname,"./dist/avaamo-assignment/index.html"));
+        });
+
         app.all('*', function(req, res) {
           res.redirect("/");
         });
